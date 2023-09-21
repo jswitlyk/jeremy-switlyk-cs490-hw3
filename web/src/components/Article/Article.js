@@ -18,7 +18,11 @@ const Article = ({ article, summary = false }) => {
         {article.body}
         {summary ? truncate(article.body, 100) : article.body}
       </div>
-      {!summary && <CommentsCell />}
+      {!summary && (
+        <div className="mt-12">
+          <CommentsCell />
+        </div>
+      )}
     </article>
   )
 }
